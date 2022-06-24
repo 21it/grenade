@@ -17,7 +17,7 @@ import           GHC.Stack                    (HasCallStack,
                                                withFrozenCallStack)
 
 import           Data.Singletons
-import           Data.Singletons.TypeLits
+import           GHC.TypeLits.Singletons
 import           Grenade
 
 import           GHC.TypeLits

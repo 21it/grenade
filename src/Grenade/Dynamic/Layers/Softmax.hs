@@ -7,7 +7,7 @@
 {-# LANGUAGE ScopedTypeVariables   #-}
 {-# LANGUAGE TypeFamilies          #-}
 
-module Grenade.Dynamic.Layers.Softmax 
+module Grenade.Dynamic.Layers.Softmax
   ( SpecSoftmax (..)
   , specSoftmax
   , softmaxLayer
@@ -16,7 +16,7 @@ module Grenade.Dynamic.Layers.Softmax
 import           Data.Proxy
 import           Data.Reflection                     (reifyNat)
 import           Data.Singletons
-import           Data.Singletons.TypeLits            hiding (natVal)
+import           GHC.TypeLits.Singletons            hiding (natVal)
 
 import           Grenade.Core
 import           Grenade.Dynamic.Network

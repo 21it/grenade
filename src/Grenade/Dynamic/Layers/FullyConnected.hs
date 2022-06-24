@@ -12,7 +12,7 @@
 {-# LANGUAGE OverloadedStrings     #-}
 {-# LANGUAGE OverloadedLabels      #-}
 
-module Grenade.Dynamic.Layers.FullyConnected 
+module Grenade.Dynamic.Layers.FullyConnected
   ( SpecFullyConnected (..)
   , specFullyConnected
   , fullyConnected
@@ -22,7 +22,7 @@ import           Data.Proxy
 import           Data.Reflection                     (reifyNat)
 import           Data.Singletons
 import           Data.Singletons.Prelude.Num         ((%*))
-import           Data.Singletons.TypeLits            hiding (natVal)
+import           GHC.TypeLits.Singletons            hiding (natVal)
 import           GHC.TypeLits
 
 import           Numeric.LinearAlgebra.Static        hiding (build, toRows, (&),

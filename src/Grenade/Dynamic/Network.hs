@@ -44,7 +44,7 @@ import           Data.Constraint                   (Dict (..))
 import           Data.Serialize
 import           Data.Singletons
 import           Data.Singletons.Prelude
-import           Data.Singletons.TypeLits          hiding (natVal)
+import           GHC.TypeLits.Singletons          hiding (natVal)
 import           Data.Typeable                     (Typeable)
 import           GHC.TypeLits
 import           System.Random.MWC

@@ -24,7 +24,7 @@ import           Data.List                    (zipWith5)
 import           Data.Proxy
 import           Data.Reflection
 import           Data.Singletons
-import           Data.Singletons.TypeLits     hiding (natVal)
+import           GHC.TypeLits.Singletons     hiding (natVal)
 import           GHC.TypeLits
 import           Unsafe.Coerce                (unsafeCoerce)
 

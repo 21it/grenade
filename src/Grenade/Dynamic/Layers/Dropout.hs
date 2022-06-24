@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeFamilies          #-}
 {-# LANGUAGE TypeOperators         #-}
 
-module Grenade.Dynamic.Layers.Dropout 
+module Grenade.Dynamic.Layers.Dropout
   ( SpecDropout (..)
   , specDropout
   , dropout
@@ -17,7 +17,7 @@ module Grenade.Dynamic.Layers.Dropout
 import           Data.Proxy
 import           Data.Reflection                     (reifyNat)
 import           Data.Singletons
-import           Data.Singletons.TypeLits            hiding (natVal)
+import           GHC.TypeLits.Singletons            hiding (natVal)
 import           GHC.TypeLits
 
 import           Grenade.Core

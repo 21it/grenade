@@ -31,7 +31,7 @@ import           Data.Proxy
 import           Data.Reflection                (reifyNat)
 import           Data.Singletons
 import           Data.Singletons.Prelude.Num    ((%*))
-import           Data.Singletons.TypeLits       hiding (natVal)
+import           GHC.TypeLits.Singletons       hiding (natVal)
 import           GHC.TypeLits
 
 import           Unsafe.Coerce                  (unsafeCoerce)

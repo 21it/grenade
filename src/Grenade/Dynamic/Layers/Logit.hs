@@ -8,7 +8,7 @@
 {-# LANGUAGE TypeFamilies          #-}
 {-# LANGUAGE TypeOperators         #-}
 
-module Grenade.Dynamic.Layers.Logit 
+module Grenade.Dynamic.Layers.Logit
   ( SpecLogit (..)
   , specLogit1D
   , specLogit2D
@@ -20,7 +20,7 @@ import           Data.Constraint                     (Dict (..))
 import           Data.Proxy
 import           Data.Reflection                     (reifyNat)
 import           Data.Singletons
-import           Data.Singletons.TypeLits            hiding (natVal)
+import           GHC.TypeLits.Singletons            hiding (natVal)
 import           GHC.TypeLits
 
 import           Unsafe.Coerce                       (unsafeCoerce)

@@ -47,7 +47,7 @@ import           Data.Maybe                   (fromJust)
 import           Data.Proxy
 import           Data.Serialize
 import           Data.Singletons
-import           Data.Singletons.TypeLits
+import           GHC.TypeLits.Singletons
 import           Data.Vector.Storable         (Vector)
 import qualified Data.Vector.Storable         as V
 import           GHC.TypeLits                 hiding (natVal)

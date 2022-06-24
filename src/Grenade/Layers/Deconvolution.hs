@@ -34,7 +34,7 @@ import           Data.List                           (foldl1')
 import           Data.Maybe
 import           Data.Proxy
 import           Data.Serialize
-import           Data.Singletons.TypeLits            hiding (natVal)
+import           GHC.TypeLits.Singletons            hiding (natVal)
 import           GHC.TypeLits
 
 import           Numeric.LinearAlgebra               hiding (konst,

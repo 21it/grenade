@@ -18,7 +18,7 @@ import           Data.List                    (group, sort)
 import           Data.Map                     (Map)
 import qualified Data.Map                     as M
 import           Data.Proxy
-import           Data.Singletons.TypeLits
+import           GHC.TypeLits.Singletons
 import           Data.Vector                  (Vector)
 import qualified Data.Vector                  as V
 import qualified Data.Vector.Storable         as VS

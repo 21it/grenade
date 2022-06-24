@@ -24,7 +24,7 @@ import           GHC.TypeLits
 import           Unsafe.Coerce
 
 #if MIN_VERSION_singletons(2,6,0)
-import           Data.Singletons.TypeLits               (SNat (..))
+import           GHC.TypeLits.Singletons               (SNat (..))
 #endif
 
 #if MIN_VERSION_base(4,9,0)

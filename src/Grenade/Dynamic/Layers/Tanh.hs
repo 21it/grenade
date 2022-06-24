@@ -8,7 +8,7 @@
 {-# LANGUAGE TypeFamilies          #-}
 {-# LANGUAGE TypeOperators         #-}
 
-module Grenade.Dynamic.Layers.Tanh 
+module Grenade.Dynamic.Layers.Tanh
   ( SpecTanh (..)
   , specTanh1D
   , specTanh2D
@@ -21,7 +21,7 @@ import           Data.Constraint                     (Dict (..))
 import           Data.Proxy
 import           Data.Reflection                     (reifyNat)
 import           Data.Singletons
-import           Data.Singletons.TypeLits            hiding (natVal)
+import           GHC.TypeLits.Singletons            hiding (natVal)
 import           GHC.TypeLits
 
 import           Unsafe.Coerce                       (unsafeCoerce)
