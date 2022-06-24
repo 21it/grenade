@@ -54,6 +54,7 @@ dependencies:
   # Versions of singletons are *tightly* coupled with the
   # GHC version  so its fine to drop version bounds.
   - singletons
+  - singletons-base
   - vector                          >= 0.11        && < 0.13
   - mwc-random                      >= 0.13
   - reflection                      >= 0.11.2
@@ -228,7 +229,7 @@ benchmarks:
       - grenade
       - criterion                       >= 1.1        && < 1.6
 
-  # NOTE: We currently do not run these benchmarks as we are not 
+  # NOTE: We currently do not run these benchmarks as we are not
   # currently developing this functionality.
   #
   # bench-lstm:

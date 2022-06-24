@@ -1,10 +1,10 @@
 cabal-version: 2.0
 
--- This file has been generated from package.yaml by hpack version 0.34.3.
+-- This file has been generated from package.yaml by hpack version 0.34.7.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c7a3b47aab62767fc2ea6d57a3d2ae8aa9235de1e35551d16803b5cff91743fe
+-- hash: 1678a9fb7d8eb348c4e5567d55fdd298ba7655547754c77754805bdeab9c2284
 
 name:           grenade
 version:        0.1.1
@@ -196,6 +196,7 @@ library
       Proto.Onnx
       Proto.Onnx_Fields
   autogen-modules:
+      Paths_grenade
       Proto.Onnx
       Proto.Onnx_Fields
   hs-source-dirs:
@@ -220,11 +221,11 @@ library
     , bifunctors
     , binary >=0.8
     , bytestring ==0.10.*
-    , cereal >=0.5 && <0.6
+    , cereal ==0.5.*
     , constraints >=0.10.1
     , containers >=0.5 && <0.7
     , data-default
-    , deepseq >=1.4 && <1.5
+    , deepseq ==1.4.*
     , directory
     , either
     , filepath
@@ -245,6 +246,7 @@ library
     , reflection >=0.11.2
     , repa
     , singletons
+    , singletons-base
     , split
     , symbols
     , terminal-progress-bar
@@ -264,7 +266,8 @@ library
     ghc-options: -fno-warn-incomplete-patterns
     cpp-options: -DType=*
   if impl(ghc >= 8.6)
-    default-extensions: NoStarIsType
+    default-extensions:
+        NoStarIsType
   if flag(fast)
     ghc-options: -O0 -Werror
   else
@@ -314,6 +317,7 @@ test-suite test
       Proto.Onnx
       Proto.Onnx_Fields
   autogen-modules:
+      Paths_grenade
       Proto.Onnx
       Proto.Onnx_Fields
   hs-source-dirs:
@@ -329,11 +333,11 @@ test-suite test
     , bifunctors
     , binary >=0.8
     , bytestring ==0.10.*
-    , cereal >=0.5 && <0.6
+    , cereal ==0.5.*
     , constraints
     , containers >=0.5 && <0.7
     , data-default
-    , deepseq >=1.4 && <1.5
+    , deepseq ==1.4.*
     , directory
     , either
     , filepath
@@ -356,6 +360,7 @@ test-suite test
     , reflection
     , repa
     , singletons
+    , singletons-base
     , split
     , symbols
     , terminal-progress-bar
@@ -376,7 +381,8 @@ test-suite test
     ghc-options: -fno-warn-incomplete-patterns
     cpp-options: -DType=*
   if impl(ghc >= 8.6)
-    default-extensions: NoStarIsType
+    default-extensions:
+        NoStarIsType
   if flag(use-float)
     cpp-options: -DUSE_FLOAT
     cc-options: -DUSE_FLOAT
@@ -394,6 +400,8 @@ benchmark bench
   main-is: bench.hs
   other-modules:
       Paths_grenade
+  autogen-modules:
+      Paths_grenade
   hs-source-dirs:
       bench
   ghc-options: -Wall -threaded -O2
@@ -406,12 +414,12 @@ benchmark bench
     , bifunctors
     , binary >=0.8
     , bytestring ==0.10.*
-    , cereal >=0.5 && <0.6
+    , cereal ==0.5.*
     , constraints >=0.10.1
     , containers >=0.5 && <0.7
     , criterion >=1.1 && <1.6
     , data-default
-    , deepseq >=1.4 && <1.5
+    , deepseq ==1.4.*
     , directory
     , either
     , filepath
@@ -433,6 +441,7 @@ benchmark bench
     , reflection >=0.11.2
     , repa
     , singletons
+    , singletons-base
     , split
     , symbols
     , terminal-progress-bar
@@ -455,6 +464,8 @@ benchmark bench-layers
   main-is: bench-layers.hs
   other-modules:
       Paths_grenade
+  autogen-modules:
+      Paths_grenade
   hs-source-dirs:
       bench
   ghc-options: -Wall -threaded -O2
@@ -467,12 +478,12 @@ benchmark bench-layers
     , bifunctors
     , binary >=0.8
     , bytestring ==0.10.*
-    , cereal >=0.5 && <0.6
+    , cereal ==0.5.*
     , constraints >=0.10.1
     , containers >=0.5 && <0.7
     , criterion >=1.1 && <1.6
     , data-default
-    , deepseq >=1.4 && <1.5
+    , deepseq ==1.4.*
     , directory
     , either
     , filepath
@@ -494,6 +505,7 @@ benchmark bench-layers
     , reflection >=0.11.2
     , repa
     , singletons
+    , singletons-base
     , split
     , symbols
     , terminal-progress-bar
@@ -516,6 +528,8 @@ benchmark bench-networks
   main-is: bench-networks.hs
   other-modules:
       Paths_grenade
+  autogen-modules:
+      Paths_grenade
   hs-source-dirs:
       bench
   ghc-options: -Wall -threaded -O2
@@ -528,12 +542,12 @@ benchmark bench-networks
     , bifunctors
     , binary >=0.8
     , bytestring ==0.10.*
-    , cereal >=0.5 && <0.6
+    , cereal ==0.5.*
     , constraints >=0.10.1
     , containers >=0.5 && <0.7
     , criterion >=1.1 && <1.6
     , data-default
-    , deepseq >=1.4 && <1.5
+    , deepseq ==1.4.*
     , directory
     , either
     , filepath
@@ -555,6 +569,7 @@ benchmark bench-networks
     , reflection >=0.11.2
     , repa
     , singletons
+    , singletons-base
     , split
     , symbols
     , terminal-progress-bar
