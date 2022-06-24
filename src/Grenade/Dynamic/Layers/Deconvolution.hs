@@ -22,7 +22,7 @@ import           Data.Constraint                     (Dict (..))
 import           Data.Proxy
 import           Data.Reflection                     (reifyNat)
 import           Data.Singletons
-import           Data.Singletons.Prelude.Num         ((%*))
+import           Prelude.Singletons         ((%*))
 import           GHC.TypeLits.Singletons            hiding (natVal)
 import           GHC.TypeLits
 

@@ -27,7 +27,7 @@ import qualified Data.Text              as T
 import           Data.List                 (mapAccumL)
 import           Data.Proxy
 
-import           Data.Singletons.Prelude.List
+import           Data.List.Singletons
 import           Data.Kind                 (Type)
 import           GHC.TypeLits
 
@@ -52,7 +52,7 @@ type family ConsLayer (layer :: Type) (shape :: Shape) (network :: Type) :: Type
 type family BuildNetwork (layers :: [Type]) (shape :: Shape) :: Type where
   BuildNetwork '[]       h = Network '[] '[h]
   BuildNetwork (x ': xs) h = ConsLayer x h (BuildNetwork xs h)
-  
+
 type FiveActivationLayers = Replicate 5 Activation
 type FiveActivationsNetwork = BuildNetwork FiveActivationLayers ('D1 1)
 

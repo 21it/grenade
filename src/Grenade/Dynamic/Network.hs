@@ -43,7 +43,7 @@ import           Control.DeepSeq
 import           Data.Constraint                   (Dict (..))
 import           Data.Serialize
 import           Data.Singletons
-import           Data.Singletons.Prelude
+import           Prelude.Singletons
 import           GHC.TypeLits.Singletons          hiding (natVal)
 import           Data.Typeable                     (Typeable)
 import           GHC.TypeLits

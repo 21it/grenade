@@ -16,7 +16,7 @@ import qualified Hedgehog.Gen                as Gen
 import           Grenade
 
 import           Data.Singletons
-import           Data.Singletons.Prelude.Num ((%*))
+import           Prelude.Singletons ((%*))
 import           GHC.TypeLits                (natVal, someNatVal)
 import           GHC.TypeNats
 import           Test.Hedgehog.Compat        (choose)

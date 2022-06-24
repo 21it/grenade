@@ -47,7 +47,7 @@ import           Control.Monad.Primitive           (PrimBase, PrimState)
 import           Control.Parallel.Strategies
 import           Data.Serialize
 import           Data.Singletons
-import           Data.Singletons.Prelude
+import           Prelude.Singletons
 import           System.Random.MWC
 #if MIN_VERSION_base(4,9,0)
 import           Data.Kind                         (Type)
@@ -345,7 +345,7 @@ instance UpdateLayer (Network sublayers subshapes) where
       buildSingletonBatches (gx :/> gxx)  = [gx] :/>> (buildSingletonBatches gxx)
 
       -- Accumulates the BatchGradients and prepends the new gradients
-      -- We expect the Gradients and the BatchGradients to have the same length, equal 
+      -- We expect the Gradients and the BatchGradients to have the same length, equal
       -- to the number of layers in the network.
       buildBatchGradients' :: forall x. Gradients x -> BatchGradients x -> BatchGradients x
       buildBatchGradients' GNil DNil = DNil

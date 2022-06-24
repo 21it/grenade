@@ -16,7 +16,7 @@ module Grenade.Core.Runner (
   , runNet
   ) where
 
-import           Data.Singletons.Prelude
+import           Prelude.Singletons
 
 import           Grenade.Core.Loss
 import           Grenade.Core.Network
@@ -65,9 +65,9 @@ train optimizer net input target (LossFunction l) =
     in (net', nsum loss)
 
 -- | Update a network with new weights after training with a batch of instances.
---   This reduces computational complexity and improves gradient descent since 
+--   This reduces computational complexity and improves gradient descent since
 --   less parameter updates and performed per epoch, and averaging the gradients leads
---   to a smoother gradient descent. 
+--   to a smoother gradient descent.
 batchTrain :: RunnableNetwork layers shapes
            => Optimizer opt
            -> Network layers shapes

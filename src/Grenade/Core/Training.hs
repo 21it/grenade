@@ -31,7 +31,7 @@ import           Control.Monad
 
 import           Data.List                  (foldl')
 import           Data.List.Split            (chunksOf)
-import           Data.Singletons.Prelude
+import           Prelude.Singletons
 
 import           Grenade.Core.Loss
 import           Grenade.Core.Network
@@ -103,8 +103,8 @@ fit trainRows validateRows TrainingOptions{ optimizer, batchSize, validationFreq
     (_, net, _) <- foldM (runEpoch optimizer trainData valData lossFnc metrics batchSize verbose validationFreq) (net0, net0, infinity)  [1..epochs]
     return net
 
--- | Train a single epoch, running the forward an backward propogation for each batch (or each example, if 
---   the batch size is 1). 
+-- | Train a single epoch, running the forward an backward propogation for each batch (or each example, if
+--   the batch size is 1).
 runEpoch :: (SingI (Last shapes), RunnableNetwork layers shapes)
          => Optimizer opt
          -> TrainingData (S (Head shapes)) (S (Last shapes))
@@ -157,7 +157,7 @@ combineTraining :: RunnableNetwork layers shapes
                 -> IO (Network layers shapes, RealNum)
 combineTraining pb !opt lossFnc (!net, loss) (!x, !y)
   = let (!net', loss') = train opt net x y lossFnc
-    in  case pb of 
+    in  case pb of
       Nothing  -> return (net', loss + loss')
       Just pb' -> incProgress pb' 1 >> return (net', loss + loss')
 
@@ -172,8 +172,8 @@ combineBatchTraining :: RunnableNetwork layers shapes
 combineBatchTraining pb !opt lossFnc batchSize (!net, loss) ts
   = let (xs, ys)       = unzip ts
         (!net', loss') = batchTrain opt net xs ys lossFnc
-    in case pb of 
-      Nothing  -> return (net', loss + loss') 
+    in case pb of
+      Nothing  -> return (net', loss + loss')
       Just pb' -> incProgress pb' batchSize >> return (net', loss + loss')
 
 -- | Calculates the loss with respect to the given loss metric

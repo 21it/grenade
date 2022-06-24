@@ -27,7 +27,7 @@ import           Control.DeepSeq
 import           Data.Serialize
 import           Data.Typeable as T
 import           Data.Singletons
-import           Data.Singletons.Prelude.List
+import           Data.List.Singletons
 #if MIN_VERSION_base(4,9,0)
 import           Data.Kind                         (Type)
 #endif

@@ -15,7 +15,7 @@ import           Data.List                    (foldl')
 import qualified Data.Map                     as M
 import           Data.Maybe                   (fromMaybe)
 import           Data.Serialize
-import           Data.Singletons.Prelude
+import           Prelude.Singletons
 import           Data.Vector                  (Vector)
 import qualified Data.Vector                  as V
 import           GHC.TypeLits

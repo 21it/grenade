@@ -19,7 +19,7 @@ module Test.Grenade.Layers.Convolution where
 import           Data.Constraint
 import           Data.Proxy
 import           Data.Singletons
-import           Data.Singletons.Prelude.Num            ((%*))
+import           Prelude.Singletons            ((%*))
 import           GHC.TypeLits
 import           Unsafe.Coerce
 

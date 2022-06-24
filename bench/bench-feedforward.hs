@@ -8,7 +8,7 @@ import           Control.Monad.Random
 import           Criterion.Main
 import           Data.List                           (foldl')
 import           Data.Singletons
-import           Data.Singletons.Prelude.List
+import           Data.List.Singletons
 import           GHC.TypeLits
 import qualified Numeric.LinearAlgebra.Static        as SA
 

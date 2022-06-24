@@ -49,7 +49,7 @@ import           Data.Proxy
 import           Data.Reflection                       (reifyNat)
 import           Data.Serialize
 import           Data.Singletons
-import           Data.Singletons.Prelude.List
+import           Data.List.Singletons
 import           Data.Typeable                         as T
 import           GHC.Generics                          hiding (R)
 import           GHC.TypeLits

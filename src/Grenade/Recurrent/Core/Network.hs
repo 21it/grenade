@@ -34,7 +34,7 @@ import           System.Random.MWC
 
 import           Data.Serialize
 import           Data.Singletons              (SingI)
-import           Data.Singletons.Prelude      (Head, Last)
+import           Prelude.Singletons      (Head, Last)
 
 #if MIN_VERSION_base(4,9,0)
 import           Data.Kind                    (Type)
@@ -323,7 +323,7 @@ instance (Fractional (RecurrentShape x), RecurrentUpdateLayer x, Fractional (Rec
 instance CreatableRecurrent sublayers subshapes => UpdateLayer (RecurrentNetwork sublayers subshapes) where
   type Gradient (RecurrentNetwork sublayers subshapes) = RecurrentGradient sublayers
   runUpdate      = applyRecurrentUpdate
-  reduceGradient = error "Attempt to reduce gradient of batch in RecurrentNetwork instance" 
+  reduceGradient = error "Attempt to reduce gradient of batch in RecurrentNetwork instance"
 
 instance CreatableRecurrent sublayers subshapes => RandomLayer (RecurrentNetwork sublayers subshapes) where
   createRandomWith = randomRecurrentWith

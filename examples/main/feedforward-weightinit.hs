@@ -10,7 +10,7 @@ import           Data.Constraint              (Dict (..))
 import           Data.List                    (foldl')
 import           Data.Serialize
 import           Data.Singletons
-import           Data.Singletons.Prelude.List
+import           Data.List.Singletons
 import           GHC.TypeLits
 import qualified Numeric.LinearAlgebra.Static as SA
 import           Options.Applicative

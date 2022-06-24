@@ -16,7 +16,7 @@ import           Control.Monad                   (guard)
 import           Control.Monad.ST                (runST)
 import           Data.Constraint
 import           Data.Proxy
-import           Data.Singletons.Prelude.List
+import           Data.List.Singletons
 import           GHC.TypeLits.Singletons
 import qualified Data.Vector.Storable            as VS
 import qualified Data.Vector.Storable.Mutable    as VS (write)
@@ -35,7 +35,7 @@ import           GHC.TypeLits
 import           Data.Kind                       (Type)
 #endif
 import           Data.Singletons
-import           Data.Singletons.Prelude.Num     ((%*))
+import           Prelude.Singletons     ((%*))
 
 import           Test.Grenade.Layers.Convolution
 import           Test.Hedgehog.Compat
