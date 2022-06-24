@@ -28,7 +28,7 @@ module Grenade.Core.WeightInitialization
 import           Control.Monad
 import           Control.Monad.Primitive         (PrimBase, PrimState)
 import           Data.Proxy
-import           Data.Singletons.TypeLits
+import           GHC.TypeLits.Singletons
 import           GHC.TypeLits                    hiding (natVal)
 import           Numeric.LinearAlgebra.Static
 import           System.Random.MWC
